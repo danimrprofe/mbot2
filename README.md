@@ -12,57 +12,79 @@
 - [I. Connect Servos, Sensors and Motors](#i-connect-servos-sensors-and-motors)
   - [Appendix 1 CyberPi Extras](#appendix-1-cyberpi-extras)
 
-# MakeBlock mBot2 / CyberPi con python
+# 🤖 MakeBlock mBot2 / CyberPi con Python
 
-## Documentation
+## 📚 Documentación Oficial
 
-https://www.yuque.com/makeblock-help-center-en/mcode/mblock-python
-CyberPi Python https://www.yuque.com/makeblock-help-center-en/mcode/cyberpi-api
-(including Pocket Shield, mBot2 Shield and mBuild Modules)
-Firmware Update
-To update the CyberPi firmware:
+* **Centro de ayuda mBlock Python:** [mBlock Python Editor](https://www.yuque.com/makeblock-help-center-en/mcode/mblock-python)
+* **API de CyberPi:** [CyberPi Python API](https://www.yuque.com/makeblock-help-center-en/mcode/cyberpi-api)
+    *(Incluye Pocket Shield, mBot2 Shield y módulos mBuild)*
 
-1. Open the online ide at https://ide.mblock.cc/#/
-2. Click on Devices and add the CyberPi device to the list, if it is not there already
-3. Click Connect and connect the CyberPi (download and install the device driver, if asked)
-4. Click on Settings and select Firmware Update
-   3 | P a g e
-   A. The mBot2 Vehicle
-   Documentation
-   MBot2 Introduction
-   https://education.makeblock.com/help/cyberpi-series/cyberpi-series-cyberpi-series-packages-and-extensions/mbot2-introduction/
-   Operational Guide
-   https://education.makeblock.com/help/cyberpi-series/cyberpi-series-cyberpi-series-packages-and-extensions/mbot2-operational-guide/
-   Python Reference
-   https://www.yuque.com/makeblock-help-center-en/mcode/cyberpi-api-shields#9eo89
-   mBuild Modules (Ultrasonic Sensor 2, Quad RGB Sensor)
-   https://www.yuque.com/makeblock-help-center-en/mcode/cyberpi-api-mbuild
-   or
-   https://education.makeblock.com/help/mblock-python/mblock-python-editor-python-api-documentation-for-devices/mblock-python-editor-python-api-documentation-for-cyberpi/mblock-python-editor-apis-for-mbuild-modules/
-   The Build The Connections
-   (Ultrasonic into the mBuild port, motors to EM1/EM2)
-   The Power Switch must be turned on
-   before the you can upload code
+---
 
-## B. Introduction and Setup
+## 🔄 Actualización de Firmware
+Para actualizar el firmware de tu CyberPi, sigue estos pasos:
 
-Download and Install the Software
-Download and install the mBlock Windows or Mac software from https://mblock.makeblock.com/en-us/download/
-(The PC software seems to be more stable than the web version located at https://python.mblock.cc/ ) 5. Run the software and select the Python Editor.
-The Python Editor program will open. The block editor will stay open, but you can close it at any time.
-Mode switch File menu Rename project Coding space
-Connection button Upload code to mBot2
+1.  Abre el IDE en línea: [ide.mblock.cc](https://ide.mblock.cc/#/)
+2.  Haz clic en **Dispositivos** (Devices) y añade el dispositivo **CyberPi** a la lista.
+3.  Haz clic en **Conectar** (Connect) para vincular tu CyberPi.
+4.  Ve a **Ajustes** (Settings) y selecciona **Actualización de Firmware** (Firmware Update).
 
-TURN ON THE MBOT2 USING THE SWITCH ON THE SIDE
-The lights on both the ultrasonic sensor and the line follower sensor should turn on. If they are don’t, the wiring is incorrect or unplugged, and needs to be fixed. 7. Select Upload mode. If a message appears, tick “Don’t remind me” and then click Sure to switch. 8. Plug the mBot2 into a USB port and click the Connect button .
-Select your USB port from the list and click Connect. 9. Click on the File menu and select New Project. 10. Start coding
-Find Your Port
-You can easily find your device by first leaving your mBot unplugged. Click Connect and look at the list of USB ports.
-Close the connect window, then plug in your mBot2. Click Connect again and look for the port that has just been added.
+---
 
-## C. Our First Program – Hello
+## 🏎️ A. El Vehículo mBot2
 
-Our first program will write ‘hello’ on the console, say it on the audio speaker and turn all LED’s to green for 2 seconds.
+### Enlaces de Referencia
+* **Introducción al mBot2:** [Conceptos básicos](https://education.makeblock.com/help/cyberpi-series/cyberpi-series-cyberpi-series-packages-and-extensions/mbot2-introduction/)
+* **Guía Operativa:** [Manual de funcionamiento](https://education.makeblock.com/help/cyberpi-series/cyberpi-series-cyberpi-series-packages-and-extensions/mbot2-operational-guide/)
+* **Referencia de Python (Shields):** [CyberPi Shields API](https://www.yuque.com/makeblock-help-center-en/mcode/cyberpi-api-shields#9eo89)
+* **Módulos mBuild:** *(Sensor Ultrasónico 2, Sensor Quad RGB)*
+    * [Opción 1: Yuque Documentation](https://www.yuque.com/makeblock-help-center-en/mcode/cyberpi-api-mbuild)
+    * [Opción 2: Makeblock Help Center](https://education.makeblock.com/help/mblock-python/mblock-python-editor-python-api-documentation-for-devices/mblock-python-editor-python-api-documentation-for-cyberpi/mblock-python-editor-apis-for-mbuild-modules/)
+
+### 🛠️ Montaje y Conexiones
+Para que el robot funcione correctamente, asegúrate de cumplir con lo siguiente:
+
+* **Sensores:** El sensor de ultrasonidos debe ir conectado al puerto **mBuild**.
+* **Motores:** Los motores deben conectarse a los puertos **EM1** y **EM2**.
+* **Energía:** El interruptor de encendido **debe estar en posición ON** antes de intentar cargar o subir cualquier código desde el ordenador.
+
+## 🛠️ B. Introducción y Configuración
+
+### 1. Descarga e Instalación del Software
+* Descarga e instala el software mBlock para Windows o Mac desde: [mblock.makeblock.com](https://mblock.makeblock.com/en-us/download/)
+* *(Nota: La versión de escritorio suele ser más estable que la versión web).*
+
+### 2. Configuración del Editor
+1. Ejecuta el software y selecciona el **Editor de Python**.
+2. Se abrirá el programa del Editor de Python. Puedes cerrar el editor de bloques si lo deseas.
+
+### 3. Encendido y Verificación física
+* **ENCIENDE EL MBOT2** usando el interruptor lateral.
+* **Verificación:** Las luces del sensor de ultrasonidos y del sensor de seguimiento de línea deben encenderse. Si no lo hacen, comprueba que los cables estén bien conectados.
+
+### 4. Conexión del Robot
+1. Selecciona el modo **Upload** (Carga). Si aparece un mensaje, marca "Don't remind me" (No volver a mostrar) y haz clic en *Sure*.
+2. Conecta el mBot2 al puerto USB del ordenador.
+3. Haz clic en el botón **Connect** (Conectar).
+4. Selecciona tu puerto USB de la lista y haz clic en **Connect**.
+
+### 🔍 Cómo encontrar tu puerto USB
+Si tienes dudas de cuál es el puerto correcto, sigue este truco:
+1. Deja el mBot **desconectado**.
+2. Haz clic en **Connect** y observa la lista de puertos disponibles.
+3. Cierra la ventana de conexión.
+4. Conecta tu mBot2 al USB.
+5. Haz clic en **Connect** de nuevo: el puerto que acaba de aparecer en la lista es el de tu robot.
+
+### 5. Empezar a programar
+1. Ve al menú **File** (Archivo).
+2. Selecciona **New Project** (Nuevo proyecto).
+3. ¡Ya puedes empezar a escribir tu código!
+
+## 🚀 C. Nuestro primer programa – Hola
+
+Nuestro primer programa escribirá "hola" en la consola, lo reproducirá por el altavoz y encenderá todos los LEDs en verde durante 2 segundos.
 
 ```python
 import cyberpi as cpi
@@ -76,92 +98,167 @@ cpi.led.off()
 cpi.console.clear()
 ```
      
-Click the Upload button to send your code to the mBot2.
-The code will start executing immediately it is uploaded.
-Unsuccessful Upload
-If the upload is unsuccessful check three things: 11. The mBot2 is turned on (the power switch on the left side). 12. The cable is plugged in and a connection established (see section B4).
-Save the Project and Upload to the CyberPi
-Save the project to your computer by clicking on the File menu and choosing Export project.
-It is a good idea to create a folder to contain all your projects.
-Make sure you type in a descriptive name for your file.
+### 📤 Carga del programa al mBot2
 
-### Coding Errors and Feedback from the CyberPi
+Haz clic en el botón **Upload** (Cargar) para enviar tu código al mBot2.
+El código comenzará a ejecutarse inmediatamente después de que la carga finalice.
 
-When you write code, errors show up with an explanation mark symbol.
-In the example shown here there are a couple of errors:
-• the statement in line 1 is import cyberpi as cpu rather than import cyberpi as cpi causing errors in all the other lines.
-• line 4 is missing cpi.
-If you were to upload this code it would not run and the upload window will show you the first error. Scroll to the bottom of the text to see the error message.
-Program Feedback
-You can also give yourself feedback in the code you write by using the print() function. This is different to the cpi.console.print() function. Try this:
+---
+
+### ❌ Carga fallida (Unsuccessful Upload)
+
+Si la carga falla, comprueba estos tres puntos:
+1. **Interruptor:** Que el mBot2 esté encendido (el interruptor de encendido está en el lado izquierdo).
+2. **Conexión:** Que el cable esté bien enchufado y se haya establecido la conexión (consulta la sección B4).
+3. **Modo:** Asegúrate de que el editor esté en modo "Upload" y no en modo "Live".
+
+### 💾 Guardar el proyecto y exportar a la CyberPi
+
+Para guardar el proyecto en tu ordenador:
+1. Haz clic en el menú **File** (Archivo).
+2. Elige la opción **Export project**.
+
+> **💡 Consejo:** Es muy recomendable crear una carpeta específica para organizar todos tus proyectos. Asegúrate de escribir un nombre descriptivo para cada archivo (por ejemplo: `01_hola_mundo.mblock`) para encontrarlos fácilmente después.
+
+### ⚠️ Errores de código y retroalimentación del CyberPi
+
+Cuando escribes código, los errores aparecen marcados con un símbolo de **signo de exclamación**. 
+
+En el ejemplo que analizamos, hay un par de errores comunes:
+* **Error de alias:** En la línea 1 dice `import cyberpi as cpu` en lugar de `import cyberpi as cpi`. Esto causa errores en todas las líneas siguientes porque el programa no reconoce qué es "cpi".
+* **Falta de prefijo:** En la línea 4 falta el prefijo `cpi.` antes del comando.
+
+
+
+Si intentaras cargar este código, no funcionaría. La ventana de carga te mostrará el **primer error detectado**. 
+> **Truco:** Desliza hasta el final del texto en la consola de errores para ver el mensaje específico (ej. `NameError: name 'cpu' is not defined`).
+
+### 💬 Retroalimentación del programa (Feedback)
+
+Puedes ayudarte a ti mismo a entender qué está haciendo el robot usando la función `print()`. 
+
+**Es importante notar la diferencia:**
+1. `cpi.console.print()`: Escribe el texto en la **pantalla pequeña** del CyberPi.
+2. `print()`: Envía el texto a la **consola de Python en tu ordenador**. Esto es ideal para depurar (debug) sin llenar la pantallita del robot.
+
+Prueba este código para ver la diferencia:
 
 ```python
-import cyberpi as cpi import time cpi.console.print("hello") print('talk to me') cpi.audio.play('hello') print('turn leds to green for 2 seconds') cpi.led.on(0,255,0) time.sleep(2) cpi.led.off() cpi.console.clear()
+import cyberpi as cpi
+import time
+
+# Mensaje para el programador (aparece en el PC)
+print("Iniciando secuencia de prueba...") 
+
+cpi.console.print("Hola Mundo") # Aparece en el robot
+time.sleep(1)
+
+print("Cerrando programa.")
 ```
 
 ### Comments and turning on/off code statements
 
 Put a # in front of any line to create comments or to turn code statements into comments so they are not executed.
 
-## D. Buttons
+## 🔘 D. Botones y Joystick
 
-The mBot2 is controlled by a module called cyberpi. This has a joystick, a home button and two push buttons (A and B). We can use the joystick and buttons in our code. It also has a light sensor and microphone that we can use.
+El mBot2 se controla mediante el módulo **CyberPi**. Este dispositivo incluye:
+* Un **Joystick** de 5 posiciones.
+* Un **Botón central** (Home).
+* Dos **Botones pulsadores** (A y B).
+* Sensores integrados: Sensor de luz y micrófono.
 
-Instead of the code running automatically when it is uploaded, let’s turn on the display when we press button A. To do this we use a while loop, that does nothing but turn on the red lights and wait for the button to be pressed.
+### Control mediante bucles y condiciones
+En lugar de que el código se ejecute automáticamente al cargarse, vamos a hacer que el robot espere a que interactuemos con él. Utilizaremos un bucle `while` que mantenga las luces en rojo hasta que pulsemos el **botón A**.
 
 ```python
-import cyberpi as cpi import time while not cpi.controller.is_press('a'): #while button A is not pressed cpi.led.on(255,0,0) cpi.led.on(0,255,0) cpi.console.print("hello") cpi.audio.play('hello') cpi.led.on(0,255,0) time.sleep(2) cpi.led.off() cpi.console.clear()
+import cyberpi as cpi
+import time
+
+# --- ESPERA A QUE SE PULSE EL BOTÓN A ---
+cpi.console.print("Pulsa A para iniciar")
+
+# Mientras el botón A NO esté pulsado...
+while not cpi.controller.is_press('a'):
+    cpi.led.on(255, 0, 0) # Luces rojas de espera
+    time.sleep(0.1)       # Pequeña pausa para no saturar el procesador
+
+# Una vez pulsado A, el código continúa aquí
+cpi.led.on(0, 255, 0)     # Cambia a verde
+cpi.console.clear()
+cpi.console.print("¡Iniciado!")
+cpi.audio.play('hello')
+```python
+import cyberpi as cpi
+import time
+
+# Mientras no se pulse el botón A
+while not cpi.controller.is_press('a'): 
+    cpi.led.on(255, 0, 0)      # Enciende en rojo
+    cpi.led.on(0, 255, 0)      # Enciende en verde
+    cpi.console.print("hola")
+    cpi.audio.play('hello')    # Mantenemos 'hello' para que el archivo de audio funcione
+    cpi.led.on(0, 255, 0)
+    time.sleep(2)
+    cpi.led.off()
+    cpi.console.clear()
 ```
 
+## E. Funcionamiento de los Motores
 
-## E. Run the Motors
+Existen varias formas en las que podemos querer mover el mBot2. Las velocidades de los motores hacia adelante están entre **0 y 100**. Las velocidades hacia atrás están entre **0 y -100**. El movimiento sigue ocurriendo incluso a velocidades muy cercanas a cero.
 
-There are a number of ways we may want to move the mBot2. Forward motor speeds are between 0 and 100. Backward motor speeds are between 0 and -100. Movement still occurs at speeds close to zero.
-Movement Commands
-Forward or backward forever.
+### Forward or backward forever.
+
 (Should only be used when the ultrasonic sensor or colour sensors are used to control when the motors should stop)
+
+```python
 cpi.mbot2.forward(speed = 50)
 cpi.mbot2.backward(speed = 50)
 cpi.mbot2.forward(speed = -50)
 cpi.mbot2.EM_stop(port = "all")
-Forward or backward for a length of time
+```
+
+### Forward or backward for a length of time
+
+```python
 cpi.mbot2.forward(speed = 50, run_time = 1)
 cpi.mbot2.backward(speed = 50, run_time = 1)
 cpi.mbot2.forward(speed = -50, run_time = 1)
-Forward or backward for a fixed distance
+```
+
+### Forward or backward for a fixed distance
+
 cpi.mbot2.straight(40, speed = 50)
 cpi.mbot2.straight(-40, speed = 50)
-Turn on the spot for a length of time
+
+### Turn on the spot for a length of time
+
 (wheels turning in different directions)
 cpi.mbot2.turn_left(speed = 50, run_time = 1)
 cpi.mbot2.turn_right(speed = 50, run_time = 1)
-Turn for a number of degrees of heading
+
+### Turn for a number of degrees of heading
+
 cpi.mbot2.turn(90, speed = 50)
-Gradual turn for a length of time
+
+### Gradual turn for a length of time
+
 (wheels turning in the same direction or one wheel stopped)
 cpi.mbot2.drive_power(60, -40) #left +, right -
 time.sleep(2)
 cpi.mbot2.EM_stop(port = "all")
-Stop motors
+
+### Stop motors
+
 cpi.mbot2.EM_stop(port = "all")
-cm
-cm
-seconds
-seconds
-forever
-forever
-time
-time
-degrees
-degrees
-time
-time
-10 | P a g e
 
-## Code Templates
+## 📄 Plantillas de Código
 
-There are two basic code templates we use when running motors. In both cases, we use button A to turn on the mBot2 to start the actions.
-Separating code into sections makes it much easier to understand the code and make changes to it. Later, we will add more sections as we require them.
+Existen dos plantillas de código básicas que utilizamos al trabajar con motores. En ambos casos, usamos el botón A para activar el mBot2 e iniciar las acciones.
+
+Separar el código en secciones hace que sea mucho más fácil de entender y de realizar cambios en él. Más adelante, añadiremos más secciones según las vayamos necesitando.
+
 # Programación de mBot2 / CyberPi con Python
 
 ### 1. Acciones Únicas (Single Actions)
@@ -169,39 +266,40 @@ Separating code into sections makes it much easier to understand the code and ma
 Utiliza este bloque cuando quieras que las acciones del mBot2 ocurran solo una vez al iniciar el programa.
 
 ```python
-#IMPORTS--------------------------------------- 
+#IMPORTACIONES--------------------------------- 
 import cyberpi as cpi 
 import time 
 
-#WAIT TO START--------------------------------- 
-cpi.console.println('Press A') 
+#ESPERAR PARA EMPEZAR-------------------------- 
+cpi.console.println('Pulsa A') 
 while not cpi.controller.is_press('a'): 
-    cpi.led.on(255,0,0) 
-    cpi.led.on(0,255,0) 
+    cpi.led.on(255,0,0) # Rojo
+    cpi.led.on(0,255,0) # Verde
 
-#ROBOT ACTIONS--------------------------------- 
-cpi.mbot2.forward(speed = 50, run_time = 2) #Example commands. 
-cpi.mbot2.backward(speed = 50, run_time = 2) #Replace with your own! 
+#ACCIONES DEL ROBOT---------------------------- 
+cpi.mbot2.forward(speed = 50, run_time = 2)  # Avanzar (velocidad 50, durante 2 seg)
+cpi.mbot2.backward(speed = 50, run_time = 2) # Retroceder (velocidad 50, durante 2 seg)
 cpi.led.off()
 ```
 
 Si tenemos acciones que se repiten un número específico de veces, podemos usar un bucle for. Por ejemplo, para moverse en cuadrado:
 
 ```python
-#IMPORTS--------------------------------------- 
+#IMPORTACIONES--------------------------------- 
 import cyberpi as cpi 
 import time 
 
-#WAIT TO START--------------------------------- 
-cpi.console.println('Press A') 
+#ESPERAR PARA EMPEZAR-------------------------- 
+cpi.console.println('Pulsa A') 
 while not cpi.controller.is_press('a'): 
     cpi.led.on(255,0,0) 
     cpi.led.on(0,255,0) 
 
-#ROBOT ACTIONS--------------------------------- 
+#ACCIONES DEL ROBOT---------------------------- 
+# El robot hará un cuadrado (4 lados)
 for i in range(4): 
-    cpi.mbot2.straight(40, speed = 50) #cm 
-    cpi.mbot2.turn(90, speed = 50) #degrees 
+    cpi.mbot2.straight(40, speed = 50) # Avanza 40 cm
+    cpi.mbot2.turn(90, speed = 50)     # Gira 90 grados 
 
 cpi.led.off()
 ```
@@ -216,30 +314,31 @@ cpi.led.off()
 Este código utiliza un bucle while True que repite las acciones indefinidamente, o hasta que presiones el botón "Home" junto a la conexión USB.
 
 ```python
-#IMPORTS--------------------------------------- 
+#IMPORTACIONES--------------------------------- 
 import cyberpi as cpi 
 import time 
 
-#WAIT TO START--------------------------------- 
-cpi.console.println('Press A') 
+#ESPERAR PARA EMPEZAR-------------------------- 
+cpi.console.println('Pulsa A') 
 while not cpi.controller.is_press('a'): 
     cpi.led.on(255,0,0) 
     cpi.led.on(0,255,0) 
 
-#MAIN LOOP------------------------------------- 
+#BUCLE PRINCIPAL------------------------------- 
 while True: 
-    cpi.mbot2.forward(speed = 50, run_time = 2) #Example commands. 
-    cpi.mbot2.backward(speed = 50, run_time = 2) #Replace with your own!
+    # El robot se moverá adelante y atrás continuamente
+    cpi.mbot2.forward(speed = 50, run_time = 2)  # Avanza (velocidad 50, 2 segundos)
+    cpi.mbot2.backward(speed = 50, run_time = 2) # Retrocede (velocidad 50, 2 segundos)
 ```
 
 Este tipo de código se utiliza principalmente en conjunto con el joystick, los botones o los sensores (ultrasónico y sigue-líneas), donde el mBot2 debe responder constantemente a los cambios en el entorno.
 
-RETOS
-Coloca dos objetos pequeños en el suelo a una distancia mínima de 1 metro. Conduce alrededor de ellos varias veces formando un "8". Cuando gires, utiliza los LED para indicar tus giros.
+### RETOS
 
-Coloca un objeto grande en el suelo y gira alrededor de él 3 veces en un círculo grande y suave (Utiliza la función cpi.mbot2.drive_power()).
+- Coloca dos objetos pequeños en el suelo a una distancia mínima de 1 metro. Conduce alrededor de ellos varias veces formando un "8". Cuando gires, utiliza los LED para indicar tus giros.
+- Coloca un objeto grande en el suelo y gira alrededor de él 3 veces en un círculo grande y suave (Utiliza la función cpi.mbot2.drive_power()).
    
-# F. Avoid or Seek
+## F. Avoid or Seek
 
 The Ultrasonic Sensor is used to measure the distance between the mBot2 and anything in front of it (up to about 200cm). It can be used to avoid obstacles or seek out an object and move toward it.
 
@@ -247,18 +346,70 @@ The minimum distance detected in 4cm. Smaller distances give a reading of 300.
 
 Test your Ultrasonic Sensor with this code. Putting all the sensor reading code into a function unclutters the main loop.
 
-#IMPORTS--------------------------------------- import cyberpi as cpi import time #GLOBAL VARIABLES------------------------------ distance = 300 #FUNCTIONS------------------------------------- def get_all_values(output=True): global distance distance = cpi.ultrasonic2.get(index=1) if output: cpi.console.println( str(distance) ) time.sleep(0.1) #WAIT TO START--------------------------------- cpi.console.println('Press A') while not cpi.controller.is_press('a'): cpi.led.on(255,0,0) cpi.led.on(0,255,0) #MAIN LOOP------------------------------------- while True: get_all_values(output=True)
+```python
+#IMPORTACIONES--------------------------------- 
+import cyberpi as cpi 
+import time 
 
-### Obstacle Avoidance
+#VARIABLES GLOBALES---------------------------- 
+distancia = 300 
 
-#MAIN LOOP-------------------------------------- while True: get_all_values(output=False) if distance < 10: #collision test cpi.mbot2.EM_stop(port = "all") #stop cpi.mbot2.straight(-5, speed = 50) #move back 5cm cpi.mbot2.turn(135, speed = 50) #turn 135 degrees else: cpi.mbot2.forward(speed = 50) #forward
+#FUNCIONES------------------------------------- 
+def obtener_valores(mostrar=True): 
+    global distancia 
+    # Lee la distancia del sensor ultrasónico en el puerto 1
+    distancia = cpi.ultrasonic2.get(index=1) 
+    if mostrar: 
+        cpi.console.println( str(distancia) ) 
+    time.sleep(0.1) 
 
+#ESPERAR PARA EMPEZAR-------------------------- 
+cpi.console.println('Pulsa A') 
+while not cpi.controller.is_press('a'): 
+    cpi.led.on(255,0,0) 
+    cpi.led.on(0,255,0) 
+
+#BUCLE PRINCIPAL------------------------------- 
+while True: 
+    obtener_valores(mostrar=True)
+```
+
+### Evitar Obstáculos
+
+```python
+#BUCLE PRINCIPAL--------------------------------- 
+while True: 
+    # Obtenemos la distancia sin imprimirla en pantalla cada vez
+    obtener_valores(output=False) 
+    
+    if distancia < 10: # Prueba de colisión (menos de 10 cm)
+        cpi.mbot2.EM_stop(port = "all")    # Parada de emergencia
+        cpi.mbot2.straight(-5, speed = 50) # Retroceder 5 cm
+        cpi.mbot2.turn(135, speed = 50)    # Girar 135 grados para esquivar
+    else: 
+        cpi.mbot2.forward(speed = 50)      # Avanzar si el camino está libre
+```
+        
 ### Slow Down when Close to a Collision 
 
-#MAIN LOOP-------------------------------------- while True: get_all_values(output=False) if distance < 10: #collision test cpi.mbot2.EM_stop(port = "all") #stop cpi.mbot2.straight(-5, speed = 50) #move back 5cm cpi.mbot2.turn(135, speed = 50) #turn 135 degrees elif distance < 30: new_speed = round(50 \* (distance - 10)/20) #ratio of speed required cpi.mbot2.forward(speed = new_speed) #forward at reduced speed else: cpi.mbot2.forward(speed = 50) #forward
-Seek Objects and Move Toward Them
-Rotate to detect an object closer than 80cm, then move toward the object.
-#MAIN LOOP-------------------------------------- while True: get_all_values(output=False) if distance > 80: cpi.mbot2.turn_left(speed = 50) #rotate to locate else: #object detected cpi.mbot2.EM_stop(port = "all") #stop cpi.mbot2.forward(speed = 100) #forward full speed
+```python
+#BUCLE PRINCIPAL-------------------------------------- 
+while True: 
+    obtener_valores(output=False) 
+    
+    if distancia < 10: # Prueba de colisión
+        cpi.mbot2.EM_stop(port = "all")    # Parar
+        cpi.mbot2.straight(-5, speed = 50) # Retroceder 5cm
+        cpi.mbot2.turn(135, speed = 50)    # Girar 135 grados
+        
+    elif distancia < 30: 
+        # Calcula la velocidad reducida según la distancia
+        nueva_velocidad = round(50 * (distancia - 10) / 20) 
+        cpi.mbot2.forward(speed = nueva_velocidad) # Avanzar más lento
+        
+    else: 
+        cpi.mbot2.forward(speed = 50) # Avanzar normal
+```
 
 ### Retos
 
@@ -270,8 +421,53 @@ Rotate to detect an object closer than 80cm, then move toward the object.
 The Quad RGB Sensor (color sensor) enables us to detect and follow lines, and detect colours and respond to the colours in different ways.
 Test the Sensor using this code, by passing the mBot2 over a black line on a white background.
 
-import cyberpi as cpi import time #GLOBAL VARIABLES------------------------------ distance = 300 L1 = 0 L2 = 0 R1 = 0 R2 = 0 any_line = 0 #FUNCTIONS------------------------------------- def get_all_values(output=True, black_line=True): global distance, L1, L2, R1, R2, any_line distance = cpi.ultrasonic2.get(index=1) L2 = cpi.quad_rgb_sensor.get_gray('l2', index = 1) L1 = cpi.quad_rgb_sensor.get_gray('l1', index = 1) R1 = cpi.quad_rgb_sensor.get_gray('r1', index = 1) R2 = cpi.quad_rgb_sensor.get_gray('r2', index = 1) if black_line: any_line = (L2 < 50) or (L1 < 50) or (R1 < 50) or (R2 < 50) else: any_line = (L2 > 50) or (L1 > 50) or (R1 > 50) or (R2 > 50) if output: #cpi.console.println(str(distance) ) cpi.console.println(str(L2)+' '+str(L1)+' '+str(R1)+' '+str(R2) ) #WAIT TO START--------------------------------- cpi.console.println('Press A') while not cpi.controller.is_press('a'): cpi.led.on(255,0,0) cpi.led.on(0,255,0) #MAIN LOOP-------------------------------------- while True: get_all_values(output=True, black_line=True) time.sleep(0.1)
+```python
+#IMPORTACIONES--------------------------------- 
+import cyberpi as cpi 
+import time 
 
+#VARIABLES GLOBALES---------------------------- 
+distancia = 300 
+L2 = 0 
+L1 = 0 
+R1 = 0 
+R2 = 0 
+hay_linea = 0 
+
+#FUNCIONES------------------------------------- 
+def obtener_valores(mostrar=True, linea_negra=True): 
+    global distancia, L1, L2, R1, R2, hay_linea 
+    
+    # Obtener distancia del sensor de ultrasonidos
+    distancia = cpi.ultrasonic2.get(index=1) 
+    
+    # Obtener valores de escala de grises de los 4 sensores (L=Izquierda, R=Derecha)
+    L2 = cpi.quad_rgb_sensor.get_gray('l2', index = 1) 
+    L1 = cpi.quad_rgb_sensor.get_gray('l1', index = 1) 
+    R1 = cpi.quad_rgb_sensor.get_gray('r1', index = 1) 
+    R2 = cpi.quad_rgb_sensor.get_gray('r2', index = 1) 
+    
+    # Detectar si alguno de los sensores está sobre una línea (umbral de 50)
+    if linea_negra: 
+        hay_linea = (L2 < 50) or (L1 < 50) or (R1 < 50) or (R2 < 50) 
+    else: 
+        hay_linea = (L2 > 50) or (L1 > 50) or (R1 > 50) or (R2 > 50) 
+        
+    if mostrar: 
+        # Muestra los valores de los 4 sensores en la pantalla del CyberPi
+        cpi.console.println(str(L2)+' '+str(L1)+' '+str(R1)+' '+str(R2) ) 
+
+#ESPERAR PARA EMPEZAR-------------------------- 
+cpi.console.println('Pulsa A') 
+while not cpi.controller.is_press('a'): 
+    cpi.led.on(255,0,0) 
+    cpi.led.on(0,255,0) 
+
+#BUCLE PRINCIPAL------------------------------- 
+while True: 
+    obtener_valores(mostrar=True, linea_negra=True) 
+    time.sleep(0.1)
+```
 
 We can use the color sensor values to test whether the color sensor is on or off a black line.
 • On a line will give a low reflectance value or off a line will give a high value.
@@ -298,12 +494,53 @@ SumoBots use the ultrasonic sensor to seek and destroy another robot vehicle in 
 
 ### H1. Basic Sumo Code
 
-The basic actions of a SumoBot are:
-• A three second wait before doing anything
-• Move forward from the edge 20cm
-• Rotate until the ultrasonic sensor locates the other vehicle (less than 80cm away)
-• Drive full speed toward the other vehicle
-• If the white edge is detected (high reflectance value) then stop, back up and rotate to locate the other vehicle #MAIN LOOP-------------------------------------- found = False cpi.mbot2.straight(20, speed = 40) while True: get_all_values(output=False, black_line=False) if any_line: #white line detected found = False cpi.led.on(0,255,0) cpi.mbot2.EM_stop(port = "all") #stop, back and rotate cpi.mbot2.straight(-10, speed = 40) if distance < 80 or found: #other robot detected found = True cpi.led.on(0,0,255) cpi.mbot2.forward(speed = 40) #forward full speed else: cpi.mbot2.turn_left(speed = 5) #rotate to locate
+Las acciones fundamentales de un SumoBot son:
+
+- Espera de seguridad: Tres segundos de pausa antes de cualquier acción (norma común en competiciones).
+- Entrada al ring: Avanzar 20 cm desde el borde inicial.
+- Búsqueda: Girar hasta que el sensor de ultrasonidos localice al oponente (a menos de 80 cm).
+- Ataque: Conducir a máxima velocidad hacia el otro vehículo.
+- Supervivencia: Si se detecta el borde blanco (valor de reflectancia alto), detenerse, retroceder y girar para volver a buscar al oponente.
+
+Este código utiliza la lógica de detección de línea blanca (fondo oscuro, borde claro) y detección de objetos.
+
+```python
+# --- PREPARACIÓN INICIAL ---
+time.sleep(3) # Espera de seguridad de 3 segundos
+encontrado = False
+cpi.mbot2.straight(20, speed = 40) # Entrar 20 cm al ring
+
+# --- BUCLE PRINCIPAL DE COMBATE ---
+while True:
+    # Obtenemos valores. black_line=False busca líneas blancas (reflectancia alta)
+    obtener_valores(mostrar=False, linea_negra=False)
+    
+    if hay_linea: 
+        # ¡Peligro! Borde del ring detectado (línea blanca)
+        encontrado = False
+        cpi.led.on(0, 255, 0) # LEDs en verde
+        cpi.mbot2.EM_stop(port = "all")
+        # Maniobra de supervivencia: retroceder y girar
+        cpi.mbot2.straight(-10, speed = 40)
+        cpi.mbot2.turn(90, speed = 40) 
+
+    elif distancia < 80 or encontrado:
+        # ¡Oponente localizado!
+        encontrado = True
+        cpi.led.on(0, 0, 255) # LEDs en azul (modo ataque)
+        cpi.mbot2.forward(speed = 100) # Ataque a máxima velocidad
+        
+    else:
+        # Buscando al oponente
+        cpi.led.on(255, 0, 0) # LEDs en rojo (modo búsqueda)
+        cpi.mbot2.turn_left(speed = 30) # Girar para localizar
+```
+
+🔍 Explicación de las mejoras añadidas:
+
+- encontrado = True: He añadido esta "bandera" para que, una vez que el robot detecta al oponente, no deje de avanzar aunque lo pierda de vista un milisegundo, asegurando un empuje constante.
+- linea_negra=False: Es crucial en la función obtener_valores. En un ring de sumo, el suelo es negro y el borde es blanco, por lo que buscamos valores de reflectancia altos (mayores a 50).
+- Velocidad de ataque: He subido la velocidad en el ataque (forward(speed = 100)) para maximizar la fuerza de empuje.
 
 ### H2. Enhancements
 
@@ -318,43 +555,166 @@ The basic actions of a SumoBot are:
 ▪ Drive forward until white line and turn and randomly go somewhere else until white line
 • Use more than one ultrasonic sensor at different angles
 
-## I. Connect Servos, Sensors and Motors
+Aquí tienes la traducción y adaptación de la guía de hardware y bucles avanzados para el mBot2 y CyberPi, organizada en formato Markdown para mayor claridad.
+
+## 🛠️ I. Conexión de Servos, Sensores y Motores
 
 ### Servos
 
-Up to 4 servos can be plugged in the servo ports on the right-hand side (S3 and S4), or the general IO ports on the left (S1 and S2). import cyberpi as cpi import time while True: cpi.mbot2.servo_set(90, 'S1') time.sleep(1) cpi.mbot2.servo_set(140, 'S1') time.sleep(2) cpi.mbot2.servo_set(40, 'S1') time.sleep(2)
-
-### Read Analog Sensors
-Read analog sensors (such as potentiometers or soil moisture sensors) using ports S1 and S2
-
-cpi.mbot2.read_analog(port) #returns 0 – 5V
-Read and Write Digital Sensors
-cpi.mbot2.write_digital(val, port) #val = True, False, 0, 1 cpi.mbot2.read_digital(port) #returns True, False
-
-### Run DC motors
-Additional motors can be run from the M1 and M2 ports.
-cpi.mbot2.motor_set(power, port) #power is -100 to 100 cpi.mbot2.motor_stop(port) cpi.mbot2.motor_drive(power1, power2) #set the power to M1 and M2
-
-### More Loops
-
-e.g. for i in range(4,6): cpi.led.on(0,255,0, id = i)
-import cyberpi as cpi import time while True: if cpi.controller.is_press('a'): for i in range(1,6,2): cpi.led.on(0,255,0, id = i) #or id = 1, value 1-5 cpi.console.print('green\n') elif cpi.controller.is_press('b'): cpi.led.off() for i in range(2,5,2): cpi.led.on(0,0,255, id = i) cpi.console.print('blue\n') time.sleep(0.1)
-
-## Appendix 1 CyberPi Extras
-
-### Ultrasonic, slider (potentiometer) and multi-touch
-import cyberpi as cpi import time while True: distance = cpi.ultrasonic2.get(index=1) pot = cpi.slider.get() touch = cpi.multi_touch.is_touch(ch = 1) #1-8 or ch = "any" print(distance, pot, touch) time.sleep(0.1)
-
-### Lightsensor
-light = cpi.get_bri()
-
-Sound sensor
-volume = cpi.get_loudness(mode = "maximum")
-
-Audio Commands
+Puedes conectar hasta 4 servos en los puertos específicos de la derecha (S3 y S4) o en los puertos de entrada/salida (IO) de la izquierda (S1 y S2).
 
 ```python
-cpi.audio.play_tone(freq, t) cpi.audio.add_vol(val) #-100 – 100
-Accelerometer/Gyro Commands forward = cpi.is_tiltforward() backward = cpi.is_tiltback() left = cpi.is_tiltleft() right = cpi.is_tiltright()
-cpi.is_shake() cpi.get_shakeval() #0-100 cpi.get_pitch() #pitch angle cpi.get_roll() #roll angle cpi.get_yaw() #yaw angle cpi.reset_yaw()
+import cyberpi as cpi
+import time
+
+while True:
+    cpi.mbot2.servo_set(90, 'S1')   # Mover servo en S1 a 90 grados
+    time.sleep(1)
+    cpi.mbot2.servo_set(140, 'S1')  # Mover a 140 grados
+    time.sleep(2)
+    cpi.mbot2.servo_set(40, 'S1')   # Mover a 40 grados
+    time.sleep(2)
 ```
+
+### Lectura de Sensores Analógicos
+
+Lee sensores analógicos (como potenciómetros o sensores de humedad de suelo) usando los puertos S1 y S2.
+
+```python
+# Retorna un valor de voltaje entre 0 – 5V
+valor = cpi.mbot2.read_analog('S1')
+```
+
+### Lectura y Escritura Digital
+
+Puedes leer estados (encendido/apagado) o enviar señales digitales.
+
+```python
+# Escribir (val = True, False, 0, 1)
+cpi.mbot2.write_digital(1, 'S1') 
+
+# Leer (retorna True o False)
+estado = cpi.mbot2.read_digital('S1')
+```
+
+### Motores de Corriente Continua (DC)
+
+Se pueden conectar motores adicionales en los puertos M1 y M2.
+
+```python
+# Ajustar potencia individual (-100 a 100)
+cpi.mbot2.motor_set(50, 'M1') 
+
+# Detener un motor específico
+cpi.mbot2.motor_stop('M1') 
+
+# Ajustar potencia a M1 y M2 simultáneamente
+cpi.mbot2.motor_drive(50, 50)
+```
+
+### 🔁 Bucles Avanzados (Loops)
+
+Puedes usar rangos para controlar LEDs específicos, por ejemplo: for i in range(4, 6): encenderá los LEDs del 4 al 5.
+
+Este ejemplo utiliza los botones A y B para alternar patrones de colores en los LEDs:
+
+```python
+import cyberpi as cpi
+import time
+
+while True:
+    if cpi.controller.is_press('a'):
+        # Enciende LEDs 1, 3 y 5 en VERDE
+        for i in range(1, 6, 2): 
+            cpi.led.on(0, 255, 0, id = i) 
+        cpi.console.print('verde\n')
+        
+    elif cpi.controller.is_press('b'):
+        cpi.led.off() # Apaga todos antes de cambiar
+        # Enciende LEDs 2 y 4 en AZUL
+        for i in range(2, 5, 2): 
+            cpi.led.on(0, 0, 255, id = i)
+        cpi.console.print('azul\n')
+        
+    time.sleep(0.1) # Pequeña pausa para estabilidad
+```
+
+Aquí tienes la traducción y organización de los extras de CyberPi en formato Markdown. He agrupado los comandos por su función para que te sirvan como una guía de referencia rápida.
+
+## 📚 Apéndice 1: Extras de CyberPi
+
+### Sensores externos (Ultrasonidos, Deslizador y Multitáctil)
+
+Este código lee la distancia, el valor de un potenciómetro deslizante y si se está tocando un sensor táctil.
+
+```python
+import cyberpi as cpi
+import time
+
+while True:
+    distancia = cpi.ultrasonic2.get(index=1)
+    potenciometro = cpi.slider.get()
+    tocado = cpi.multi_touch.is_touch(ch = 1) # Canal 1-8 o "any" (cualquiera)
+    
+    print(distancia, potenciometro, tocado)
+    time.sleep(0.1)
+```
+
+### Sensores integrados de CyberPi
+
+#### Sensor de luz: mide el brillo ambiental.
+
+```python
+luz = cpi.get_bri()
+```
+
+#### Sensor de sonido: mide el volumen ambiental.
+
+```python
+volumen = cpi.get_loudness(mode = "maximum")
+```
+
+### Comandos de Audio
+
+Controla el altavoz interno para generar tonos o ajustar el volumen.
+
+```python
+cpi.audio.play_tone(440, 1) # Toca una frecuencia (Hz) durante (t) segundos
+cpi.audio.add_vol(10)       # Ajusta volumen (-100 a 100)
+```
+
+### Acelerómetro y Giroscopio (Detección de movimiento)
+
+CyberPi puede detectar su inclinación y orientación en el espacio.
+
+#### Inclinación básica
+
+```python
+adelante = cpi.is_tiltforward()
+atras = cpi.is_tiltback()
+izquierda = cpi.is_tiltleft()
+derecha = cpi.is_tiltright()
+```
+
+#### Detección de agitación:
+
+```python
+cpi.is_shake()              # Devuelve True si se agita
+valor_giro = cpi.get_shakeval() # Intensidad del agitado (0-100)
+```
+
+#### Ángulos de orientación:
+
+```python
+cpi.get_pitch()   # Ángulo de inclinación (adelante/atrás)
+cpi.get_roll()    # Ángulo de balanceo (izquierda/derecha)
+cpi.get_yaw()     # Ángulo de guiñada (rotación horizontal)
+cpi.reset_yaw()   # Restablece el ángulo de guiñada a cero
+```
+### Resumen de variables de orientación
+
+Para que lo visualices mejor en tus proyectos de robótica:
+
+- Pitch (Inclinación): Imagina el morro de un avión subiendo o bajando.
+- Roll (Alabeo): El avión inclinando sus alas a los lados.
+- Yaw (Guiñada): El avión girando a izquierda o derecha sin inclinarse.
