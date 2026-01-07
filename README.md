@@ -556,20 +556,18 @@ while True:
 - linea_negra=False: Es crucial en la función obtener_valores. En un ring de sumo, el suelo es negro y el borde es blanco, por lo que buscamos valores de reflectancia altos (mayores a 50).
 - Velocidad de ataque: He subido la velocidad en el ataque (forward(speed = 100)) para maximizar la fuerza de empuje.
 
-### H2. Enhancements
+### H2. Mejoras
 
-• Don’t waste time moving forward at the start before starting to find the other vehicle
-• Only scan left and right up to 90 degrees the first time
-• Stop every 10 degrees when scanning to make sure scan detects vehicle (moving too fast doesn’t work)
-• Use movement sensor to detect a collision or the bot lifted off the ground (pitch or roll) and respond to that (see Appendix 1)
-• If motion is stopped for x seconds, use a series of rapid wheel movements (e.g. back and forth) to try and get free
-• Use a different strategy:
-▪ Follow white line around the outside (use L2 or R2)
-▪ Drive to a random place
-▪ Drive forward until white line and turn and randomly go somewhere else until white line
-• Use more than one ultrasonic sensor at different angles
-
-Aquí tienes la traducción y adaptación de la guía de hardware y bucles avanzados para el mBot2 y CyberPi, organizada en formato Markdown para mayor claridad.
+* **No pierdas tiempo** moviéndote hacia adelante al principio antes de empezar a buscar al otro vehículo.
+* La primera vez, **escanea a izquierda y derecha** solo hasta 90 grados.
+* **Detente cada 10 grados** al escanear para asegurarte de que el escaneo detecta el vehículo (moverse demasiado rápido no funciona).
+* Usa el **sensor de movimiento** para detectar una colisión o si el robot ha sido levantado del suelo (inclinación lateral o frontal - *pitch* o *roll*) y responde a ello (ver Apéndice 1).
+* Si el movimiento se detiene durante **x segundos**, utiliza una serie de movimientos rápidos de las ruedas (por ejemplo, hacia adelante y hacia atrás) para intentar liberarte.
+* Utiliza una **estrategia diferente**:
+    * Sigue la línea blanca por el exterior (usa L2 o R2).
+    * Conduce hacia un lugar aleatorio.
+    * Conduce hacia adelante hasta la línea blanca, gira y ve aleatoriamente a otro lugar hasta encontrar la línea blanca.
+* Utiliza **más de un sensor de ultrasonidos** en diferentes ángulos.
 
 ## 🛠️ I. Conexión de Servos, Sensores y Motores
 
