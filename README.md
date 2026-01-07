@@ -1,17 +1,3 @@
-- [MakeBlock mBot2 / CyberPi con python](#makeblock-mbot2--cyberpi-con-python)
-  - [Documentation](#documentation)
-  - [B. Introduction and Setup](#b-introduction-and-setup)
-  - [C. Our First Program – Hello](#c-our-first-program--hello)
-    - [Coding Errors and Feedback from the CyberPi](#coding-errors-and-feedback-from-the-cyberpi)
-  - [D. Buttons](#d-buttons)
-  - [E. Run the Motors](#e-run-the-motors)
-  - [Code Templates](#code-templates)
-- [F. Avoid or Seek](#f-avoid-or-seek)
-- [G. Detect and Follow a Line](#g-detect-and-follow-a-line)
-- [H. SumoBot](#h-sumobot)
-- [I. Connect Servos, Sensors and Motors](#i-connect-servos-sensors-and-motors)
-  - [Appendix 1 CyberPi Extras](#appendix-1-cyberpi-extras)
-
 # 🤖 MakeBlock mBot2 / CyberPi con Python
 
 ## 📚 Documentación Oficial
@@ -119,19 +105,6 @@ Para guardar el proyecto en tu ordenador:
 2. Elige la opción **Export project**.
 
 > **💡 Consejo:** Es muy recomendable crear una carpeta específica para organizar todos tus proyectos. Asegúrate de escribir un nombre descriptivo para cada archivo (por ejemplo: `01_hola_mundo.mblock`) para encontrarlos fácilmente después.
-
-### ⚠️ Errores de código y retroalimentación del CyberPi
-
-Cuando escribes código, los errores aparecen marcados con un símbolo de **signo de exclamación**. 
-
-En el ejemplo que analizamos, hay un par de errores comunes:
-* **Error de alias:** En la línea 1 dice `import cyberpi as cpu` en lugar de `import cyberpi as cpi`. Esto causa errores en todas las líneas siguientes porque el programa no reconoce qué es "cpi".
-* **Falta de prefijo:** En la línea 4 falta el prefijo `cpi.` antes del comando.
-
-
-
-Si intentaras cargar este código, no funcionaría. La ventana de carga te mostrará el **primer error detectado**. 
-> **Truco:** Desliza hasta el final del texto en la consola de errores para ver el mensaje específico (ej. `NameError: name 'cpu' is not defined`).
 
 ### 💬 Retroalimentación del programa (Feedback)
 
