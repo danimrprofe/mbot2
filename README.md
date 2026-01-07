@@ -435,7 +435,62 @@ We can use the color sensor values to test whether the color sensor is on or off
 • If both sensors L1 and R1 are on black – go straight ahead
 • If only sensor L1 is on black – turn to the left
 • If only sensor R1 is on black – turn to the right
-First, test the code below without the motors driving. Then take off the comment # and try with the motors running. #MAIN LOOP-------------------------------------- cpi.mbot2.drive_power(50, -50) #forward while True: get_all_values(output=False, black_line=True) if L1 < 50 and R1 < 50: cpi.mbot2.drive_power(20, -20) #straight ahead cpi.led.on(255,0,0,id=2) cpi.led.on(255,0,0,id=4) elif L1 < 50: cpi.mbot2.drive_power(5, -20) #turn left cpi.led.on(255,0,0,id=2) elif R1 < 50: cpi.mbot2.drive_power(20, -5) #turn right cpi.led.on(255,0,0,id=4) else: cpi.led.on(0,255,0)
+First, test the code below without the motors driving. Then take off the comment # and try with the motors running. 
+
+Aquí tienes la explicación desglosada del código para el seguimiento de líneas, explicada paso a paso y de forma muy sencilla.
+
+## 🏁 F. Seguimiento de Línea (Conceptos Básicos)
+
+El sensor del mBot2 detecta cuánta luz rebota del suelo.
+
+- Línea Negra: Rebota poca luz (valor bajo, menos de 50%).
+- Suelo Blanco: Rebota mucha luz (valor alto, más de 50%).
+
+1. La Lógica de Decisión
+
+Para que el robot siga la línea, debe decidir según lo que ven sus dos sensores centrales (L1 y R1):
+
+- Si L1 y R1 ven negro: El robot está centrado → Avanza recto.
+- Si solo L1 ve negro: El robot se está saliendo por la derecha → Gira a la izquierda.
+- Si solo R1 ve negro: El robot se está saliendo por la izquierda → Gira a la derecha.
+
+2. Código del Programa
+
+Este es el programa completo y simplificado. Primero pruébalo solo con luces; cuando funcione, quita el símbolo # de los motores.
+
+```python
+import cyberpi as cpi
+
+# BUCLE PRINCIPAL
+while True:
+    # Leer valores de los sensores de línea
+    # L1 y R1 son los sensores internos
+    L1 = cpi.quad_rgb_sensor.get_gray('L1')
+    R1 = cpi.quad_rgb_sensor.get_gray('R1')
+
+    if L1 < 50 and R1 < 50:
+        # AMBOS EN NEGRO: Recto
+        cpi.mbot2.drive_power(20, -20) 
+        cpi.led.on('red', id=2) # Luz izquierda
+        cpi.led.on('red', id=4) # Luz derecha
+        
+    elif L1 < 50:
+        # SOLO IZQUIERDA EN NEGRO: Girar a la izquierda
+        cpi.mbot2.drive_power(5, -20) 
+        cpi.led.on('red', id=2)
+        cpi.led.off(id=4)
+        
+    elif R1 < 50:
+        # SOLO DERECHA EN NEGRO: Girar a la derecha
+        cpi.mbot2.drive_power(20, -5) 
+        cpi.led.on('red', id=4)
+        cpi.led.off(id=2)
+        
+    else:
+        # FUERA DE LA LÍNEA (Blanco): Luces verdes
+        cpi.led.on('green')
+```
+
 To follow the line faster, you might need the change:
 • The power to the left and right wheels
 • The difference in power between the left and right wheels
