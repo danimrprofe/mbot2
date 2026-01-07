@@ -161,20 +161,6 @@ cpi.led.on(0, 255, 0)     # Cambia a verde
 cpi.console.clear()
 cpi.console.print("¡Iniciado!")
 cpi.audio.play('hello')
-```python
-import cyberpi as cpi
-import time
-
-# Mientras no se pulse el botón A
-while not cpi.controller.is_press('a'): 
-    cpi.led.on(255, 0, 0)      # Enciende en rojo
-    cpi.led.on(0, 255, 0)      # Enciende en verde
-    cpi.console.print("hola")
-    cpi.audio.play('hello')    # Mantenemos 'hello' para que el archivo de audio funcione
-    cpi.led.on(0, 255, 0)
-    time.sleep(2)
-    cpi.led.off()
-    cpi.console.clear()
 ```
 
 ## E. Funcionamiento de los Motores
