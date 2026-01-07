@@ -63,7 +63,19 @@ Close the connect window, then plug in your mBot2. Click Connect again and look 
 ## C. Our First Program – Hello
 
 Our first program will write ‘hello’ on the console, say it on the audio speaker and turn all LED’s to green for 2 seconds.
-import cyberpi as cpi import time cpi.console.print("hello") cpi.audio.play('hello') cpi.led.on(0,255,0) #red, green, blue values from 0 to 255 time.sleep(2) #time delay in seconds cpi.led.off() cpi.console.clear()
+
+```python
+import cyberpi as cpi
+import time
+
+cpi.console.print("hello")
+cpi.audio.play('hello')
+cpi.led.on(0, 255, 0) #red, green, blue values from 0 to 255
+time.sleep(2)         #time delay in seconds
+cpi.led.off()
+cpi.console.clear()
+```
+     
 Click the Upload button to send your code to the mBot2.
 The code will start executing immediately it is uploaded.
 Unsuccessful Upload
