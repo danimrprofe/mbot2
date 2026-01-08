@@ -7,60 +7,70 @@ Existen varias formas en las que podemos querer mover el mBot2. Las velocidades 
 Si no le pasamos ningún parámetro, se mueve al 50% de velocidad
 
 ```python
+import cyberpi as cpi
 cpi.mbot2.forward()
 ```
 
 Si le paso un número como parámetro se mueve a esa velocidad:
 
 ```python
+import cyberpi as cpi
 cpi.mbot2.forward(20)
 ```
 
+### Parar motores
+
 ```python
-cpi.mbot2.forward(speed = 50)
-cpi.mbot2.backward(speed = 50)
-cpi.mbot2.forward(speed = -50)
+import time
+import cyberpi as cpi
+cpi.mbot2.forward(20)
+time.sleep(2)
 cpi.mbot2.EM_stop(port = "all")
 ```
 
-### Forward or backward for a length of time
+Con un segundo argumento le damos el tiempo en segundos:
 
 ```python
-cpi.mbot2.forward(speed = 50, run_time = 1)
-cpi.mbot2.backward(speed = 50, run_time = 1)
-cpi.mbot2.forward(speed = -50, run_time = 1)
+import cyberpi as cpi
+cpi.mbot2.forward(50,1)
+cpi.mbot2.backward(50,1)
+cpi.mbot2.forward(50,1)
+cpi.mbot2.EM_stop(port = "all")
 ```
 
 ### Adelante o atrás una cierta distancia
 
 ```python
+import cyberpi as cpi
 cpi.mbot2.straight(40, speed = 50)
 cpi.mbot2.straight(-40, speed = 50)
 ```
 
-### Girar en el mismo sitio
+### Girar sobre sí mismo
 
 Para ello, las ruedas necesitan girar en diferente sentido:
 
 ```python
+import cyberpi as cpi
 cpi.mbot2.turn_left(speed = 50, run_time = 1)
 cpi.mbot2.turn_right(speed = 50, run_time = 1)
 ```
 
 ### Girar en un ángulo concreto
 
+```python
+import cyberpi as cpi
 cpi.mbot2.turn(90, speed = 50)
+```
 
-### Gradual turn for a length of time
+### Giro gradual
 
-(wheels turning in the same direction or one wheel stopped)
+```python
+import cyberpi as cpi
 cpi.mbot2.drive_power(60, -40) #left +, right -
 time.sleep(2)
 cpi.mbot2.EM_stop(port = "all")
-
-### Parar motores
-
-cpi.mbot2.EM_stop(port = "all")
+```
 
 ## 📄 Plantillas de Código
 
