@@ -6,6 +6,34 @@ Nuestro primer programa:
 - Lo reproducirá por el altavoz
 - Encenderá todos los LEDs en verde durante 2 segundos.
 
+## La librería cyberpi
+
+La librería que vamos a utilizar se llama `cyberpi`.
+
+```python
+import cyberpi
+```
+
+Es la instrucción que se usa en Python para cargar la librería (biblioteca) oficial que permite controlar la placa CyberPi.
+Sin esta línea de código, Python no sabría qué es la CyberPi ni cómo hablar con sus sensores, luces o pantalla.
+
+## Alias
+
+Un alias es una variable que podemos utilizar para hacer referencia a otra palabra.
+
+```python
+import cyberpi as cpi  # Importa la librería de CyberPi
+```
+
+Ahora, cuando usemos `cpi` será como escribir `cyberpi`.
+
+## Mostrar información por pantalla
+
+```python
+import cyberpi as cpi  # Importa la librería de CyberPi
+cpi.console.print("hola")    # Escribe "hello" en la pantalla del robot
+```
+
 ```python
 import cyberpi as cpi  # Importa la librería de CyberPi
 import time            # Importa la librería de tiempo
@@ -16,6 +44,59 @@ cpi.led.on(0, 255, 0)         # Enciende los LEDs en verde (Rojo=0, Verde=255, A
 time.sleep(2)                 # Espera 2 segundos antes de seguir
 cpi.led.off()                 # Apaga todos los LEDs
 cpi.console.clear()           # Borra el texto de la pantalla
+```
+
+## Temporizador
+
+```python
+import cyberpi as cpi  # Importa la librería de CyberPi
+import time            # Importa la librería de tiempo
+
+cpi.console.print("hola")    # Escribe "hello" en la pantalla del robot
+time.sleep(2)                 # Espera 2 segundos antes de seguir
+cpi.console.clear()           # Borra el texto de la pantalla
+```
+
+## Encender LEDs
+
+```python
+import cyberpi as cpi  # Importa la librería de CyberPi
+import time            # Importa la librería de tiempo
+
+cpi.led.on(0, 255, 0)         # Enciende los LEDs en verde (Rojo=0, Verde=255, Azul=0)
+time.sleep(2)                 # Espera 2 segundos antes de seguir
+cpi.led.on(255, 0, 0)         # Enciende los LEDs en verde (Rojo=0, Verde=255, Azul=0)
+time.sleep(2)                 # Espera 2 segundos antes de seguir
+cpi.led.on(0, 0, 255)         # Enciende los LEDs en verde (Rojo=0, Verde=255, Azul=0)
+time.sleep(2)                 # Espera 2 segundos antes de seguir
+cpi.led.off()                 # Apaga todos los LEDs
+```
+
+Si quieres un color que no sea básico, usas valores RGB (Rojo, Verde, Azul) de 0 a 255:
+
+```
+cpi.led.show(r, g, b): Enciende todos los LEDs con la mezcla exacta.
+```
+
+cpi.led.show(255, 255, 0) #crea color amarillo.
+
+Como hay 5 luces, puedes controlar cada una por separado usando su número (del 1 al 5):
+cpi.led.set_rgb(r, g, b, id) #Cambia el color de un solo LED.
+
+```
+cpi.led.set_rgb(255, 0, 0, 1) #pone solo el primer LED en rojo.
+```
+
+Brillo:
+
+```
+cpi.led.set_brightness(valor): Ajusta qué tan fuerte brilla la luz (de 0 a 100).
+```
+
+Efectos:
+
+```
+cpi.led.play(nombre_efecto): Activa animaciones predefinidas como "rainbow" (arcoíris) o "meteor".
 ```
 
 ## 📤 Carga del programa al mBot2

@@ -2,9 +2,19 @@
 
 Existen varias formas en las que podemos querer mover el mBot2. Las velocidades de los motores hacia adelante están entre **0 y 100**. Las velocidades hacia atrás están entre **0 y -100**. El movimiento sigue ocurriendo incluso a velocidades muy cercanas a cero.
 
-### Forward or backward forever.
+### Adelante y atrás para siempre
 
-(Should only be used when the ultrasonic sensor or colour sensors are used to control when the motors should stop)
+Si no le pasamos ningún parámetro, se mueve al 50% de velocidad
+
+```python
+cpi.mbot2.forward()
+```
+
+Si le paso un número como parámetro se mueve a esa velocidad:
+
+```python
+cpi.mbot2.forward(20)
+```
 
 ```python
 cpi.mbot2.forward(speed = 50)
@@ -21,18 +31,23 @@ cpi.mbot2.backward(speed = 50, run_time = 1)
 cpi.mbot2.forward(speed = -50, run_time = 1)
 ```
 
-### Forward or backward for a fixed distance
+### Adelante o atrás una cierta distancia
 
+```python
 cpi.mbot2.straight(40, speed = 50)
 cpi.mbot2.straight(-40, speed = 50)
+```
 
-### Turn on the spot for a length of time
+### Girar en el mismo sitio
 
-(wheels turning in different directions)
+Para ello, las ruedas necesitan girar en diferente sentido:
+
+```python
 cpi.mbot2.turn_left(speed = 50, run_time = 1)
 cpi.mbot2.turn_right(speed = 50, run_time = 1)
+```
 
-### Turn for a number of degrees of heading
+### Girar en un ángulo concreto
 
 cpi.mbot2.turn(90, speed = 50)
 
@@ -43,7 +58,7 @@ cpi.mbot2.drive_power(60, -40) #left +, right -
 time.sleep(2)
 cpi.mbot2.EM_stop(port = "all")
 
-### Stop motors
+### Parar motores
 
 cpi.mbot2.EM_stop(port = "all")
 
@@ -97,18 +112,6 @@ for i in range(4):
 
 cpi.led.off()
 ```
-
-### RETOS
-
-**Reto 1**
-
-- Coloca uno o más objetos grandes en el suelo. Navega con el mBot2 a través o alrededor de ellos.
-
-**Reto 2**
-
-- Consiste en una serie de tableros que forman un laberinto.
-- No conoces la forma del laberinto hasta la competición.
-- Gana la persona que mantenga al robot sobre los tableros y consiga el tiempo más rápido.
 
 ### 2. Acciones Infinitas (Forever Actions)
 
