@@ -8,31 +8,19 @@ La distancia mínima detectada es de **4 cm**. Las distancias menores dan una le
 Prueba tu sensor de ultrasonidos con este código. Poner todo el código de lectura del sensor dentro de una **función** ayuda a mantener el bucle principal más limpio y organizado.
 
 ```python
-#IMPORTACIONES---------------------------------
 import cyberpi as cpi
 import time
 
-#VARIABLES GLOBALES----------------------------
-distancia = 300
-
-#FUNCIONES-------------------------------------
-def obtener_valores(output=True):
-    global distancia
-    # Lee la distancia del sensor ultrasónico en el puerto 1
-    distancia = cpi.ultrasonic2.get(index=1)
-    if mostrar:
-        cpi.console.println( str(distancia) )
-    time.sleep(0.1)
-
-#ESPERAR PARA EMPEZAR--------------------------
 cpi.console.println('Pulsa A')
 while not cpi.controller.is_press('a'):
     cpi.led.on(255,0,0)
-    cpi.led.on(0,255,0)
+cpi.led.on(0,255,0)
 
-#BUCLE PRINCIPAL-------------------------------
 while True:
-    obtener_valores(output=True)
+    distancia = cpi.ultrasonic2.get(index=1)
+    if mostrar:
+        cpi.console.println( str(distancia) )
+        time.sleep(0.1)
 ```
 
 ### Evitar Obstáculos
