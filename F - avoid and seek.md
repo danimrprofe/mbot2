@@ -25,11 +25,18 @@ while True:
 ### Evitar Obstáculos
 
 ```python
-#BUCLE PRINCIPAL---------------------------------
-while True:
-    # Obtenemos la distancia sin imprimirla en pantalla cada vez
-    obtener_valores(output=False)
+import cyberpi as cpi
+import time
 
+cpi.console.println('Pulsa A')
+while not cpi.controller.is_press('a'):
+    cpi.led.on(255,0,0)
+cpi.led.on(0,255,0)
+
+while True:
+    distancia = cpi.ultrasonic2.get(index=1)
+    cpi.console.println( str(distancia) )
+    time.sleep(0.1)
     if distancia < 10: # Prueba de colisión (menos de 10 cm)
         cpi.mbot2.EM_stop(port = "all")    # Parada de emergencia
         cpi.mbot2.straight(-5, speed = 50) # Retroceder 5 cm
