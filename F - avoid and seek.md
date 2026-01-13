@@ -18,9 +18,8 @@ cpi.led.on(0,255,0)
 
 while True:
     distancia = cpi.ultrasonic2.get(index=1)
-    if mostrar:
-        cpi.console.println( str(distancia) )
-        time.sleep(0.1)
+    cpi.console.println( str(distancia) )
+    time.sleep(0.1)
 ```
 
 ### Evitar Obstáculos
