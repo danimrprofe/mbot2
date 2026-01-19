@@ -51,7 +51,9 @@ while True:
 Para evitar impactos bruscos, podemos programar el mBot2 para que reduzca su velocidad a medida que se acerca a un objeto. En lugar de detenerse de golpe, el robot ajustará su potencia proporcionalmente a la distancia detectada por el sensor de ultrasonidos.
 
 ```python
-#BUCLE PRINCIPAL--------------------------------------
+import cyberpi as cpi
+import time
+
 while True:
     distancia = cpi.ultrasonic2.get(index=1)
     cpi.console.println( str(distancia) )
