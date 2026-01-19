@@ -68,8 +68,3 @@ while True:
     else:
         cpi.mbot2.forward(speed = 50) # Avanzar normal
 ```
-
-### Retos
-
-5. Coloca 4 objetos en las esquinas de un cuadrado. Encuentra uno de ellos y detente antes de golpearlo. Gira y busca el siguiente objeto, hasta que hayas encontrado los cuatro.
-6. Encuentra el camino de forma autónoma a través de un laberinto sencillo (las paredes deben tener al menos 10 cm de altura).
