@@ -69,8 +69,3 @@ Para seguir la línea más rápido, es posible que necesites cambiar:
 - La diferencia de potencia entre la rueda izquierda y la derecha.
 - Cómo interpretas los valores porcentuales del sensor de color.
 - El uso de los sensores L2 y R2 también.
-
-## Retos
-
-- Carrera en Óvalo. Sigue una línea en forma de óvalo desde la salida hasta la meta. Cronometra la carrera. El robot que consiga el tiempo más rápido gana.
-- Carrera de Seguimiento de Línea RoboRAVE. Sé el robot más rápido en llegar desde la base (home) hasta la caja.

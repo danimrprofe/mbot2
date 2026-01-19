@@ -53,7 +53,9 @@ Para evitar impactos bruscos, podemos programar el mBot2 para que reduzca su vel
 ```python
 #BUCLE PRINCIPAL--------------------------------------
 while True:
-    obtener_valores(output=False)
+    distancia = cpi.ultrasonic2.get(index=1)
+    cpi.console.println( str(distancia) )
+    time.sleep(0.1)
 
     if distancia < 10: # Prueba de colisión
         cpi.mbot2.EM_stop(port = "all")    # Parar
