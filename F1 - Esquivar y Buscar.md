@@ -3,7 +3,8 @@
 El sensor de ultrasonidos se utiliza para medir la distancia entre el mBot2 y cualquier objeto que tenga delante (hasta unos 200 cm).
 Puede usarse para esquivar obstáculos o para buscar un objeto y moverse hacia él.
 
-La distancia mínima detectada es de **4 cm**. Las distancias menores dan una lectura de 300.
+- La distancia mínima detectada es de **4 cm**.
+- Las distancias menores dan una lectura de 300.
 
 Prueba tu sensor de ultrasonidos con este código. Poner todo el código de lectura del sensor dentro de una **función** ayuda a mantener el bucle principal más limpio y organizado.
 

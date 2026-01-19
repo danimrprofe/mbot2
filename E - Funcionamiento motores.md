@@ -65,12 +65,32 @@ cpi.mbot2.turn(90, speed = 50)
 
 ### Giro gradual
 
+Si queremos hacer un giro mientras nos movemos, necesitamos girar la ruedas a diferente velocidad.
+ controlar los motores del robot mBot2 (gestionado por la CyberPi) asignando un porcentaje de potencia específico a cada rueda.
+
+La función drive_power(izquierdo, derecho) utiliza valores que van de -100 a 100:60 (Motor Izquierdo): Gira hacia adelante al 60% de su potencia total.-40 (Motor Derecho): Gira hacia atrás al 40% de su potencia total (el signo negativo invierte el sentido).Resultado del MovimientoAl tener las ruedas girando en direcciones opuestas y con distintas fuerzas, el robot realizará un giro brusco hacia la derecha. No es un giro sobre su propio eje perfecto (sería 50, -50), sino un giro con un ligero desplazamiento.Ejemplos Comunes en CódigoAquí tienes cómo se vería en un script de Python para mBlock:Pythonimport cyberpi as cpi
+
+Ejemplo:
+
 ```python
 import cyberpi as cpi
 cpi.mbot2.drive_power(60, -40) #left +, right -
 time.sleep(2)
 cpi.mbot2.EM_stop(port = "all")
 ```
+
+# Moverse hacia adelante
+
+cpi.mbot2.drive_power(50, 50)
+
+# Realizar el giro que mencionaste
+
+cpi.mbot2.drive_power(60, -40)
+
+# Detener los motores
+
+cpi.mbot2.drive_power(0, 0)
+Diferencias ClaveEs importante no confundir drive_power con drive_speed:FunciónUnidadPrecisióndrive_powerPorcentaje (-100 a 100)Varía según el nivel de batería.drive_speedcm/s (centímetros por segundo)Constante gracias a los encoders de los motores.
 
 ## 📄 Plantillas de Código
 
