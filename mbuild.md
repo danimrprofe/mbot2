@@ -22,11 +22,15 @@ El sistema **mBuild** es una plataforma modular de sensores y actuadores intelig
 - **Compatibilidad:** Nativo para **CyberPi** y el **mBot2 Shield**.
 - **Programación:** Soporta mBlock 5 (Bloques) y Python.
 
+![](img/2026-01-28-09-35-04.png)
+
 ### ¿Qué es el AI & IoT Scientist Add-on Pack?
 
 Es un pack de ampliación orientado a la experimentación avanzada. Su objetivo es permitir al alumno analizar datos reales y crear proyectos inteligentes conectados a la red.
 
----
+![](img/2026-01-28-09-36-03.png)
+
+![](img/2026-01-28-09-36-24.png)
 
 ## 2. Hardware e Interconexión
 
@@ -37,14 +41,42 @@ Es un pack de ampliación orientado a la experimentación avanzada. Su objetivo 
 - **Flujo de datos:** CyberPi reconoce todos los módulos en serie, ya estén conectados a su puerto lateral o a los puertos del mBot2 Shield.
 - **Extensores:** Piezas específicas para ampliar la distancia física entre módulos.
 
+![](img/2026-01-28-09-36-49.png)
+
+También disponemos de una tabla agujereada y conectores de plástico para crear nuestros prototipos.
+
+![](img/2026-01-28-09-37-29.png)
+
 ### Gestión de Energía
 
 - **Módulo de Batería:** Incluye botón de encendido/apagado y puerto USB de carga. Ideal para proyectos autónomos.
 - **Alimentación vía CyberPi:** En modo conectado al PC, la CyberPi puede alimentar cadenas básicas por USB.
 
----
+### 🔋 Gestión de Energía: Módulo de Batería
+
+El módulo de batería es el componente encargado de proporcionar autonomía eléctrica al ecosistema mBuild, permitiendo que los proyectos funcionen sin estar conectados físicamente al ordenador.
+
+#### Características y Funcionalidades
+
+- **Independencia Energética:** Fundamental para proyectos de **IoT (Internet de las Cosas)** y estaciones de monitoreo autónomas.
+- **Control de Energía:** Dispone de un botón físico de encendido y apagado para gestionar el consumo.
+- **Puerto de Carga:** Incluye una conexión USB lateral para recargar la celda de energía.
+- **Versatilidad:** Aunque es esencial para proyectos portátiles, en prácticas de lasboratorio se puede omitir si el CyberPi está conectado por cable al PC.
+
+#### Estados de los Indicadores LED
+
+El módulo utiliza un código de colores para comunicar el estado del sistema y el nivel de carga:
+
+| Indicador LED | Estado: ON (Encendido)               | Estado: OFF (Apagado)                     |
+| :------------ | :----------------------------------- | :---------------------------------------- |
+| **LED Verde** | Sistema en funcionamiento (Power ON) | Sistema desconectado (Power OFF)          |
+| **LED Rojo**  | Batería baja o en proceso de carga   | Batería cargada o nivel de energía óptimo |
+
+> **Nota de uso:** Si conectas muchos actuadores de alto consumo (como varios motores o anillos LED), se recomienda el uso obligatorio de este módulo para evitar sobrecargar el puerto USB de la CyberPi.
 
 ## 3. Inventario de Componentes
+
+![](img/2026-01-28-09-35-46.png)
 
 ### I. Interfaz y Visualización
 
